@@ -29,6 +29,9 @@ export const typeAwareKeyValueReducer: TypeAwareKeyValueReducer =
       if (field?.type?.name === 'date' && params.data[key] === '') {
         value = null;
       }
+      if (field?.type?.name === 'Int' && params.data[key] === '') {
+        value = null;
+      }
     }
     return resource.type.fields.some((f) => f.name === key)
       ? {
