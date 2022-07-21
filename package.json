@@ -32,7 +32,7 @@
     "prepublishOnly": "npm run test && npm run build",
     "test": "jest",
     "prettier": "prettier --config ./.prettierrc --write '**/*.{js,jsx,md}'",
-    "prepare": "husky install"
+    "prepare": "npm run build"
   },
   "dependencies": {
     "graphql-ast-types-browser": "~1.0.2",
